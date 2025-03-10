@@ -13,6 +13,9 @@ url = 'https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ
 response = requests.get(url)
 data = response.json()
 
+# print of the status code
+print(f'the status code is {response.status_code}')
+
 # write the data to a json file # w = write mode
 # https://stackoverflow.com/questions/66576064/api-json-result-to-file 
 with open('cso.json', 'w') as file:

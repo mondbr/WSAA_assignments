@@ -14,6 +14,9 @@ import requests
 url = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
 response = requests.get(url)
 
+# print of the status code
+print(f'the status code is {response.status_code}')
+
 #extract the deck id
 data = response.json()
 deck_id = data["deck_id"]
