@@ -34,6 +34,7 @@ The editor we will use to create Python scripts and Jupyter notebooks.
 [Download](https://git-scm.com) \
 The software we will use to track our progress.
 
+---
 
 ## Assignments:
 
@@ -46,11 +47,14 @@ The code I wrote interacts with the Deck of Cards API to shuffle a deck and draw
 
 The program is called: 
 
+   ```
    $ assignment2-carddraw.py
-
+   ```
 
 The output (randomly) is:
 
+
+   ```
    the status code is 200
    Deck shuffled, deck id is qb9y9m023v8d
    You drew:
@@ -59,10 +63,11 @@ The output (randomly) is:
    6 of HEARTS
    4 of CLUBS
    KING of DIAMONDS
-
+   ```
 
 The code 200 indicates that the request was successful, and the server has returned the requested data. 
 
+---
 
 ### [Assignment 03 - *cso.py*](https://github.com/mondbr/WSAA_assignments/blob/main/assignment03-cso.py)
 
@@ -72,14 +77,16 @@ Write a program that retrieves the dataset for the "exchequer account (historica
 
 The program is called: 
    
+   ```
    $ assignment03-cso.py
-
+   ```
 
 This code retrieves a dataset from the Central Statistics Office (CSO) API related to the "exchequer account (historical series)" and stores it as a JSON file. 
 I started with uploading necessary libraries: `requests` to handle the HTTP request and `json` library to work with JSON data. 
 Then I used GET request to connect to the CSO API URL to retrieve the dataset. After that I extracted the JSON data from the API response using `response.json()`.
 Next, I printed the status code of the response to confirm whether the request was successful. Then I saved the received dataset into a file named "cso.json" using `json.dump()` in write mode ('w').
 
+---
 
 ### [Assignment 04 - *github.py*](https://github.com/mondbr/WSAA_assignments/blob/main/assignment03-cso.py)
 
@@ -89,12 +96,14 @@ Next, I printed the status code of the response to confirm whether the request w
 
 The program is called: 
 
+   ```
    $ assignment04-github.py
-
+   ```
 
 
 The output is:
 
+   ```
    $ the status code is 200
    Monika
    Monika
@@ -102,7 +111,7 @@ The output is:
    Monika
 
    {'commit': Commit(sha="5843f6de49b5c7c0ccc15adf752f14f98ad0e8a7"), 'content': ContentFile(path="andrew.txt")}
-
+   ```
 
 This program connects to a GitHub repository using the PyGithub library and updates a file by replacing all occurrences of the text "Andrew" with my name "Monika." It retrieves the file from the repository, modifies its content, and then commits and pushes the changes back to the repository using the GitHub API. Authorization is handled via an API key stored in a config file. The config.py file is saved in .gitignore file, therefore is not commited and pushed to my public Git repository as it contains sensitive information.
 
@@ -110,33 +119,34 @@ I started with importing `PyGithub` to interact with GitHub and `requests` to do
 
 
 
-### About me
+## About me
 
 My name is Monika Dabrowska and I am an [ATU](https://www.atu.ie/) student of Higher Diploma in Data Analytics course in Summer 2024/25.
 
 
 ---
 
- ## Technologies
+## Technologies
 
 * Visual Studio Code Version: 1.99.2
 * Cmder version v1.7.14
 
+---
 
 ## Installing Dependencies
 
 To set up this project and install all required dependencies, follow these steps:
 
 1. Clone the repository to your local machine:
-
+   ```
    $ git clone https://github.com/mondbr/WSAA_assignments
-
+   ```
 2. Navigate into the project directory
 
 3. Install the required Python packages using pip and the requirements.txt file:
-
+   ```
    $ pip install -r requirements.txt
-
+   ```
 This will install all the dependencies listed in the requirements.txt file, allows to run the programs. 
 
 
